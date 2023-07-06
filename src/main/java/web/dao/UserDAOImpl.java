@@ -1,4 +1,4 @@
-package web.Repository;
+package web.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -8,12 +8,12 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
-public class UserRepImpl implements UserRep {
+public class UserDAOImpl implements UserDAO {
     @PersistenceContext
     private EntityManager entityManager;
 
     @Autowired
-    public UserRepImpl(EntityManager entityManager) {
+    public UserDAOImpl(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
